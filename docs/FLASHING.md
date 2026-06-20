@@ -51,6 +51,7 @@ Go to **Tools** menu and set:
 
 | Setting | Value |
 |---------|-------|
+<<<<<<< HEAD
 | **Board** | `ESP32 Dev Module` |
 | **Flash Size** | `4MB (32Mb)` |
 | **Partition Scheme** | `Custom` (using the project's `partitions.csv`) |
@@ -68,6 +69,21 @@ To allow the NeoCAT V1 firmware (which originally required an 8MB ESP32-S3 layou
 > - **Windows**: Device Manager → Ports (COM & LPT) → Look for CP210x or CH340 USB-to-UART Bridge
 > - **macOS**: `/dev/cu.usbserial-*`
 > - **Linux**: `/dev/ttyUSB0` or `/dev/ttyACM0`
+=======
+| **Board** | `ESP32S3 Dev Module` |
+| **USB CDC On Boot** | `Enabled` |
+| **Flash Size** | `8MB (64Mb)` |
+| **Partition Scheme** | `Default (8MB with spiffs)` |
+| **Upload Speed** | `921600` |
+| **CPU Frequency** | `240MHz (WiFi)` |
+| **USB Mode** | `Hardware CDC and JTAG` |
+| **Port** | Select your COM port |
+
+> **Finding your COM port**: 
+> - **Windows**: Device Manager → Ports (COM & LPT) → Look for "USB Serial" or "ESP32S3"
+> - **macOS**: `/dev/cu.usbmodem*` or `/dev/cu.SLAB*`
+> - **Linux**: `/dev/ttyACM0` or `/dev/ttyUSB0`
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 
 ---
 
@@ -131,7 +147,11 @@ Hash of data verified.
 If nothing works, do a full erase and reflash:
 ```bash
 # Using esptool (found in Arduino15/packages/esp32/tools/esptool_py/)
+<<<<<<< HEAD
 esptool.exe --chip esp32 --port COM9 erase_flash
+=======
+esptool.exe --chip esp32s3 --port COM4 erase_flash
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 
 # Then re-flash using Arduino IDE
 ```
@@ -143,25 +163,43 @@ esptool.exe --chip esp32 --port COM9 erase_flash
 ```bash
 # Compile only
 arduino-cli compile \
+<<<<<<< HEAD
   --fqbn "esp32:esp32:esp32:FlashSize=4M" \
   --build-property "build.partitions=partitions" \
+=======
+  --fqbn "esp32:esp32:esp32s3:CDCOnBoot=cdc,FlashSize=8M,PartitionScheme=default_8MB" \
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
   NeoCAT_v1/
 
 # Compile and upload
 arduino-cli compile --upload \
+<<<<<<< HEAD
   -p COM9 \
   --fqbn "esp32:esp32:esp32:FlashSize=4M" \
   --build-property "build.partitions=partitions" \
+=======
+  -p COM4 \
+  --fqbn "esp32:esp32:esp32s3:CDCOnBoot=cdc,FlashSize=8M,PartitionScheme=default_8MB" \
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
   NeoCAT_v1/
 
 # Upload only (if already compiled)
 arduino-cli upload \
+<<<<<<< HEAD
   -p COM9 \
   --fqbn "esp32:esp32:esp32:FlashSize=4M" \
   NeoCAT_v1/
 
 # Monitor serial output
 arduino-cli monitor -p COM9 --config baudrate=115200
+=======
+  -p COM4 \
+  --fqbn "esp32:esp32:esp32s3:CDCOnBoot=cdc,FlashSize=8M,PartitionScheme=default_8MB" \
+  NeoCAT_v1/
+
+# Monitor serial output
+arduino-cli monitor -p COM4 --config baudrate=115200
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 ```
 
 ---

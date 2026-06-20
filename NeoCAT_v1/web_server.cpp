@@ -9,8 +9,12 @@
  * All POST endpoints that accept a body use AsyncCallbackJsonWebHandler
  * so the JSON is already parsed when the handler fires.
  */
+<<<<<<< HEAD
 #include <AsyncJson.h>
 #include <ArduinoJson.h>
+=======
+
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 #include "web_server.h"
 #include "web_dashboard.h"
 #include "config_manager.h"

@@ -46,7 +46,11 @@ String TerminalModule::getWelcomeBanner() {
     "| \\| |___ ___/ __| /_\\_   _|\n"
     "| .` / -_) _ \\__ \\/ _ \\| |\n"
     "|_|\\_\\___\\___/___/_/ \\_\\_|\n\n"
+<<<<<<< HEAD
     "NeoCAT Terminal v1.0 | ESP32\n"
+=======
+    "NeoCAT Terminal v1.0 | ESP32-S3\n"
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
     "Firmware by Arjun TM | @imarjunarz\n"
     "Type 'help' for commands."
   ));
@@ -283,7 +287,11 @@ String TerminalModule::_cmdDf(const String& args) {
          String(total/1024) + "KB      " + String(used/1024) + "KB       " + String((total-used)/1024) + "KB";
 }
 
+<<<<<<< HEAD
 String TerminalModule::_cmdUname(const String& args) { return "NeoCAT V1.0 ESP32 (Xtensa LX6) FreeRTOS"; }
+=======
+String TerminalModule::_cmdUname(const String& args) { return "NeoCAT V1.0 ESP32-S3 (Xtensa LX7) FreeRTOS"; }
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 
 String TerminalModule::_cmdUptime(const String& args) {
   uint32_t s = millis() / 1000;
@@ -314,7 +322,11 @@ String TerminalModule::_cmdHostname(const String& args) {
 String TerminalModule::_cmdDate(const String& args) { return "Uptime date: " + _cmdUptime(""); }
 String TerminalModule::_cmdWhoami(const String& args) { return "root"; }
 String TerminalModule::_cmdEnv(const String& args) {
+<<<<<<< HEAD
   return "CHIP=ESP32\nFREQ=" + String(ESP.getCpuFreqMHz()) + "MHz\nFLASH=" + String(ESP.getFlashChipSize()/1048576) + "MB\nSDK=" + String(ESP.getSdkVersion());
+=======
+  return "CHIP=ESP32-S3\nFREQ=" + String(ESP.getCpuFreqMHz()) + "MHz\nFLASH=" + String(ESP.getFlashChipSize()/1048576) + "MB\nSDK=" + String(ESP.getSdkVersion());
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 }
 
 String TerminalModule::_cmdIfconfig(const String& args) {

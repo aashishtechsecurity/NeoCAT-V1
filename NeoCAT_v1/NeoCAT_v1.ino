@@ -44,7 +44,11 @@ static const uint16_t DNS_PORT    = 53;
 static const uint16_t HTTP_PORT   = 80;
 
 // =========================== Battery Config =================================
+<<<<<<< HEAD
 static const uint8_t BATTERY_ADC_PIN = 35;  // GPIO35 (ADC1) on classic ESP32 Dev Module
+=======
+static const uint8_t BATTERY_ADC_PIN = 0;  // GPIO0 (A0) on PCBCupid Glyph S3
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 // ESP32 ADC is 12-bit (0-4095). Reference voltage is 3.3V, but it usually
 // measures up to ~3.1V without attenuation.
 // Assuming a standard voltage divider (e.g. 100k/100k -> 0.5 ratio):
@@ -115,8 +119,13 @@ void setup() {
   delay(500);  // Allow USB-CDC to stabilize on S3
   Serial.println();
   Serial.println(F("========================================"));
+<<<<<<< HEAD
   Serial.println(F("  NeoCAT V1 — ESP32 Pentesting FW"));
   Serial.println(F("  ESP32 Dev Board"));
+=======
+  Serial.println(F("  NeoCAT V1 — ESP32-S3 Pentesting FW"));
+  Serial.println(F("  PCBCupid Glyph S3 Board"));
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
   Serial.println(F("========================================"));
   Serial.printf("  ESP-IDF: %s\n", esp_get_idf_version());
   Serial.printf("  Free heap: %u bytes\n", ESP.getFreeHeap());

@@ -64,15 +64,23 @@
 | Board | Chip | Flash | Status |
 |-------|------|-------|--------|
 | PCBCupid Glyph S3 | ESP32-S3 | 8MB | ✅ Tested |
+<<<<<<< HEAD
 | ESP32 Dev Module | ESP32-D0WD-V3 | 4MB | ✅ Tested |
+=======
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 | ESP32-S3-DevKitC-1 | ESP32-S3 | 8MB | ✅ Compatible |
 | ESP32-S3-WROOM-1 | ESP32-S3 | 8MB | ✅ Compatible |
 | Any ESP32-S3 board | ESP32-S3 | 4MB+ | ⚠️ Should work |
 
 ### Pin Requirements
+<<<<<<< HEAD
 - **RGB LED**: WS2812B / NeoPixel on **GPIO23** (modified from GPIO7 to prevent SPI flash pin conflicts on classic ESP32)
 - **Built-in LED**: **GPIO2** (standard ESP32 LED pin)
 - **Battery ADC**: **GPIO35** (input-only ADC1 pin)
+=======
+- **RGB LED**: WS2812B / NeoPixel on GPIO7 (Configurable)
+- **USB**: CDC mode for serial communication
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 
 ---
 
@@ -139,5 +147,6 @@ The author is not responsible for any misuse or damage caused by this tool.
 ---
 
 <div align="center">
-  <b>Developed by Arjun TM (<a href="https://github.com/cyberkallan">@cyberkallan</a>)</b>
+  <b>Developed by Arjun TM (<a href="https://github.com/cyberkallan">@cyberkallan</a>)</b><br>
+  <b>4MB Dev Kit Port by <a href="https://instagram.com/Aashishtechsecurity">@Aashishtechsecurity</a></b>
 </div>

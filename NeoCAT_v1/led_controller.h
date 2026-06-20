@@ -21,11 +21,19 @@
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 
+<<<<<<< HEAD
 #define LED_PIN   23
 #define LED_COUNT 1
 
 #ifndef LED_BUILTIN
 #define LED_BUILTIN 2 // Common built-in LED pin for ESP32 boards if undefined
+=======
+#define LED_PIN   7
+#define LED_COUNT 1
+
+#ifndef LED_BUILTIN
+#define LED_BUILTIN 46 // Common built-in LED pin for ESP32-S3 boards if undefined
+>>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 #endif
 #define HARDWARE_LED_PIN LED_BUILTIN
 
