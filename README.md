@@ -70,15 +70,12 @@
 | Any ESP32-S3 board | ESP32-S3 | 4MB+ | ⚠️ Should work |
 
 ### Pin Requirements
-<<<<<<< HEAD
 - **RGB LED**: WS2812B / NeoPixel on **GPIO23** (modified from GPIO7 to prevent SPI flash pin conflicts on classic ESP32)
 - **Built-in LED**: **GPIO2** (standard ESP32 LED pin)
 - **Battery ADC**: **GPIO35** (input-only ADC1 pin)
 =======
 - **RGB LED**: WS2812B / NeoPixel on GPIO7 (Configurable)
 - **USB**: CDC mode for serial communication
->>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
-
 ---
 
 ## 📦 Software Requirements
