@@ -64,10 +64,7 @@
 | Board | Chip | Flash | Status |
 |-------|------|-------|--------|
 | PCBCupid Glyph S3 | ESP32-S3 | 8MB | ✅ Tested |
-<<<<<<< HEAD
 | ESP32 Dev Module | ESP32-D0WD-V3 | 4MB | ✅ Tested |
-=======
->>>>>>> 786213442cf4ac133b7cc0c7150bcd7fdab4e2a8
 | ESP32-S3-DevKitC-1 | ESP32-S3 | 8MB | ✅ Compatible |
 | ESP32-S3-WROOM-1 | ESP32-S3 | 8MB | ✅ Compatible |
 | Any ESP32-S3 board | ESP32-S3 | 4MB+ | ⚠️ Should work |
